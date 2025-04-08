@@ -1,0 +1,36 @@
+******************* WINDOWS *******************
+winget upgrade -h --all							#Instalar Actualizaciones de 
+CD D:\Desarrollo\_Python						#Dirección Pruebas
+CD C:\Users\jem26\AppData\Local\Programs\Python\Python313\Scripts\	#Dirección Ejecutables Python
+
+
+******************* PYTHON *******************
+python --version							#verificar versión de Python
+pip freeze								#verificar librerías instaladas
+pip list --outdated							#verificar librerías desactualizadas
+
+pip install xxx								#instalar librería
+python -m pip install xxx						#instalar librería
+pip install -r xxx.txt							#instalar librerías desde archivo xxx.txt
+C:\Users\jem26\AppData\...\pip.exe install xxx				#instalar librerías usando ejecutables
+
+python.exe -m pip install --upgrade pip					#actualizar versión de PIP
+py -m pip install --upgrade build					#actualizar versión de PIP
+pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}		#actualizar librerías desactualizadas
+
+Python xxx.py								#ejecutar programa desde Terminal
+
+
+******************* SAP BTP *******************
+npm run start								#Ejecutar Aplicativo Fiori desde Terminal
+
+
+******************* GIT HUB *******************
+git init								#Inicializar Repositorio
+git config --global user.name "Jem26509"				#Configuración del Repositorio - Usuario Git
+git config --global user.email "jem26509@hotmail.com"			#Configuración del Repositorio - Email Git
+git remote add origin https://github.com/Jem26509/Fiori_Project1.git	#Configuración del Repositorio - URL de Repositorio en Git
+git checkout -b desarrollo						#Crear una Rama o Branch
+git add .								#Adicionar archivos a Rama
+git commit -m "1mer commit en Desarrollo"				#Hacer Commit de la Rama
+git push --set-upstream origin desarrollo				#Finalizar Proceso (Password = Token Git)
