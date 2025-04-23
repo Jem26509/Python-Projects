@@ -1,5 +1,6 @@
 cd D:\Desarrollo\_Python\Textos
 cls
+python Prueba.py "D:\8 - Linkedin"
 python Prueba.py "D:\8 - Linkedin\_Ayudas"
 python Prueba.py "D:\8 - Linkedin\ABAP"
 python Prueba.py "D:\8 - Linkedin\BI"

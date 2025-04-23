@@ -79,6 +79,7 @@ class Capital:
                            "R3", "r3",
                            "S4", "s4",
                            "Sd", "sd",
+                           "Ui", "ui",
                            "Vb", "vb",
                            "Wf", "wf"
                            ]
