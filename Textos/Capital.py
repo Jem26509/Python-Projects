@@ -34,6 +34,7 @@ class Capital:
                            "Hana",
                            "Hl7",
                            "Idocs",
+                           "Idoc",
                            "Is-h",
                            "Java",
                            "Jira",
@@ -81,9 +82,10 @@ class Capital:
                            "Vb", "vb",
                            "Wf", "wf"
                            ]
-        self.otros = [ "(a", "(b", "(c", "(d", "(e", "(f", "(g", "(h", "(i", "(j", "(k", "(l", "(m",
-                       "(n", "(o", "(p", "(q", "(r", "(s", "(t", "(u", "(v", "(w", "(x", "(y", "(z" ]
+        #self.artic = [ "el", "la", "los", "las", "lo", "un", "una", "unos", "unas", "de" ]
 
+        #self.otros = [ "(a", "(b", "(c", "(d", "(e", "(f", "(g", "(h", "(i", "(j", "(k", "(l", "(m",
+        #               "(n", "(o", "(p", "(q", "(r", "(s", "(t", "(u", "(v", "(w", "(x", "(y", "(z" ]
 
     def capital(self):
         txt, ext = os.path.splitext(self.txt)
@@ -138,10 +140,14 @@ class Capital:
             if i == 0:
                text[i] = text[i].capitalize()
 
-            #if len(text[i]) == 1:
-            #  text[i] = text[i].upper()
+            if len(text[i]) == 1:
+              text[i] = text[i].upper()
 
             if len(text[i]) > 2:
+              text[i] = text[i].capitalize()
+
+            #Excepciones x Guión
+            if text[i-1].find("-") >= 0:
               text[i] = text[i].capitalize()
 
             #Excepciones x Palabra Reservada

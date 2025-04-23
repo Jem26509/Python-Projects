@@ -1,8 +1,13 @@
 
 import os
 import Capital
-
-pdf_directory = input('Directorio: ') #'D:\8 - Linkedin\BI'
+import sys
+ 
+if len(sys.argv) > 1:
+    for i in sys.argv:
+       pdf_directory = i
+else:
+    pdf_directory = input('Directorio: ') #'D:\8 - Linkedin\BI'
 Carpeta = os.chdir(pdf_directory)
 
 for Nombre in os.listdir():
