@@ -19,17 +19,18 @@ for Nombre in os.listdir():
     texto = texto.replace('  ',' ')
     #print('2', texto)
 
-    nombre = texto.split(" 173")
-    #print('3', nombre[0])
-    if len(nombre) == 1:
-        texto = nombre[0]
-        #print('4', texto)
+    if extension != '':
+        nombre = texto.split(" 173")
+        #print('3', nombre[0])
+        if len(nombre) == 1:
+            texto = nombre[0]
+            #print('4', texto)
 
-    if len(nombre) == 2:
-        texto = nombre[0] + extension
-        #print('4', texto)
+        if len(nombre) == 2:
+            texto = nombre[0] + extension
+            #print('4', texto)
 
-    texto = Capital.Capital(texto).capital()
-    print('9', texto)
-    os.rename(Nombre,texto)
+        texto = Capital.Capital(texto).capital()
+        print('9', texto)
+        os.rename(Nombre,texto)
 print("FIN")
