@@ -20,7 +20,7 @@ for Nombre in os.listdir():
     #print('2', texto)
 
     if extension != '':
-        nombre = texto.split(" 173")
+        nombre = texto.split(" 174")
         #print('3', nombre[0])
         if len(nombre) == 1:
             texto = nombre[0]
