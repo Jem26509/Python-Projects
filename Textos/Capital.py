@@ -43,15 +43,21 @@ class Capital:
                         "Bapi",
                         "Bapis",
                         "Bbp",
+                        "Bds",
                         "Bi", 
                         "Brf",
                         "Btp",
+                        "Bwp",
+                        "Cda",
                         "Cds",
                         "Ci-cd",
+                        "Cmod",
                         "Cpi",
+                        "Cpwi",
                         "Dax",
                         "Devops",
                         "Dra",
+                        "E2e",
                         "Ec2",
                         "Ecc",
                         "Erp",
@@ -62,6 +68,7 @@ class Capital:
                         "Git",
                         "Hana",
                         "Hl7",
+                        "Html",
                         "Idocs",
                         "Idoc",
                         "Is-h",
@@ -75,7 +82,9 @@ class Capital:
                         "Odata",
                         "Oops",
                         "Pdf",
+                        "Pld",
                         "Pl-sql",
+                        "Pmbok",
                         "Po-pi",
                         "Ptp",
                         "Python",
@@ -84,10 +93,12 @@ class Capital:
                         "Sap",
                         "Scrum",
                         "Snote",
+                        "Spau",
                         "Sql",
                         "Sqvi",
                         "Ssff",
                         "Ui5",
+                        "Uml",
                         "Windows",
                         "X-road",
                         "Aa", "aa",
@@ -96,11 +107,13 @@ class Capital:
                         "Bp", "bp",
                         "Co", "co",
                         "Fi", "fi",
+                        "Hp", "hp",
                         "Hr", "hr",
                         "Ia", "ia",
                         "Mm", "mm",
                         "Nw", "nw",
                         "Oo", "oo",
+                        "Pi", "pi",
                         "Pm", "pm",
                         "Po", "po",
                         "Pp", "pp",
@@ -108,6 +121,7 @@ class Capital:
                         "Ps", "ps",
                         "Qa", "qa",
                         "R3", "r3",
+                        "Rn", "rn",
                         "S4", "s4",
                         "Sd", "sd",
                         "Ui", "ui",
@@ -124,7 +138,8 @@ class Capital:
                         ["Los", "los"],
                         ["Las", "las"],
                         ["Una", "una"],
-                        ["Wifi","WiFi"]
+                        ["Wifi","WiFi"],
+                        ["Chatgpt","ChatGPT"]
                      ]
 
 
@@ -162,6 +177,18 @@ class Capital:
             otro = text[i].split("(")
             otro[1] = otro[1].capitalize()
             text[i] = "(" + otro[1]
+
+         #Excepciones x Guión
+         if text[i].find("-") >= 0:
+            otro = text[i].split("-")
+            otro[1] = otro[1].capitalize()
+            text[i] = otro[0] + "-" + otro[1]
+
+         #Excepciones x Guión Bajo
+         if text[i].find("_") >= 0:
+            otro = text[i].split("_")
+            otro[1] = otro[1].capitalize()
+            text[i] = "_" + otro[1]
 
          #Excepciones x Palabra Clave
          for j in self.Excep_03:

@@ -15,8 +15,10 @@ for Nombre in os.listdir():
     #print(os.path.splitext(Nombre))
     texto, extension = os.path.splitext(Nombre)
     
-    texto = Nombre.replace('_',' ')
-    texto = texto.replace('  ',' ')
+    texto = Nombre.replace('  ',' ')
+    if texto[0] != "_":
+        texto = texto.replace('_',' ')
+    texto = texto.replace('+',' ')
     #print('2', texto)
 
     if extension != '':
