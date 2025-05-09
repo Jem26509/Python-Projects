@@ -25,9 +25,10 @@ class Capital:
                         ["auditor as ","auditorías "],
                         ["wi fi","wifi"],
                         ["almac n","almacén"],
-                        ["p gina","Página"],
-                        ["f sica","Física"],
-                        ["at mico","Atómico"],
+                        ["p gina","página"],
+                        ["f sica","física"],
+                        ["at mico","atómico"],
+                        ["categor a","categoría"],
                         [" docx",""]
                      ]
       #Excepciones x Palabra Reservada
@@ -71,6 +72,7 @@ class Capital:
                         "Fiori",
                         "Git",
                         "Hana",
+                        "Hcm",
                         "Hl7",
                         "Html",
                         "Idocs",
@@ -82,6 +84,7 @@ class Capital:
                         "Lsmw",
                         "Mpr",
                         "Mrp",
+                        "N1mepi",
                         "Note",
                         "Odata",
                         "Oops",
@@ -96,6 +99,7 @@ class Capital:
                         "Rfc",
                         "Sap",
                         "Scrum",
+                        "Se11",
                         "Snote",
                         "Spau",
                         "Sql",
@@ -147,7 +151,8 @@ class Capital:
                         ["Del", "del"],
                         ["Los", "los"],
                         ["Las", "las"],
-                        ["Una", "una"]
+                        ["Una", "una"],
+                        ["For", "for"]
                      ]
 
 
@@ -204,9 +209,10 @@ class Capital:
                text[i] = text[i].replace(j[0], j[1])
 
          #Excepciones x Gramática
-         for j in self.Excep_04:
-            if j[0] == text[i]:
-               text[i] = text[i].replace(j[0], j[1])
+         if i != 0:
+            for j in self.Excep_04:
+               if j[0] == text[i]:
+                  text[i] = text[i].replace(j[0], j[1])
 
 
       delimiter = " "
