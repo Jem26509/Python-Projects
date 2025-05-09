@@ -25,6 +25,9 @@ class Capital:
                         ["auditor as ","auditorías "],
                         ["wi fi","wifi"],
                         ["almac n","almacén"],
+                        ["p gina","Página"],
+                        ["f sica","Física"],
+                        ["at mico","Atómico"],
                         [" docx",""]
                      ]
       #Excepciones x Palabra Reservada
@@ -33,6 +36,7 @@ class Capital:
                         "Adt", 
                         "Agile",
                         "Alv",
+                        "Amdp",
                         "Apis",
                         "Ariba",
                         "Asap",
@@ -99,6 +103,7 @@ class Capital:
                         "Ssff",
                         "Ui5",
                         "Uml",
+                        "Vpc",
                         "Windows",
                         "X-road",
                         "Aa", "aa",
@@ -134,12 +139,15 @@ class Capital:
                         ["APIS", "APIs"],
                         ["BADIS", "BADIs"],
                         ["Gaps", "GAPs"],
+                        ["Wifi","WiFi"],
+                        ["Chatgpt","ChatGPT"]
+                     ]
+      #Excepciones x Gramática
+      self.Excep_04 = [
                         ["Del", "del"],
                         ["Los", "los"],
                         ["Las", "las"],
-                        ["Una", "una"],
-                        ["Wifi","WiFi"],
-                        ["Chatgpt","ChatGPT"]
+                        ["Una", "una"]
                      ]
 
 
@@ -193,6 +201,11 @@ class Capital:
          #Excepciones x Palabra Clave
          for j in self.Excep_03:
             if j[0] in text[i]:
+               text[i] = text[i].replace(j[0], j[1])
+
+         #Excepciones x Gramática
+         for j in self.Excep_04:
+            if j[0] == text[i]:
                text[i] = text[i].replace(j[0], j[1])
 
 
