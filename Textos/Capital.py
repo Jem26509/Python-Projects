@@ -29,6 +29,14 @@ class Capital:
                         ["f sica","física"],
                         ["at mico","atómico"],
                         ["categor a","categoría"],
+                        ["t pico","típico"],
+                        ["est s","estás"],
+                        ["dec logo", "decálogo"],
+                        ["success factors", "successfactors"],
+                        ["sap script","sapscript"],
+                        ["smart forms","smartforms"],
+                        ["adobe forms","adobeforms"],
+                        ["ooabap","oo abap"],
                         [" docx",""]
                      ]
       #Excepciones x Palabra Reservada
@@ -41,16 +49,20 @@ class Capital:
                         "Apis",
                         "Ariba",
                         "Asap",
+                        "Ats",
                         "Aws",
                         "Azure",
                         "Badi",
                         "Badis",
                         "Bapi",
                         "Bapis",
+                        "Bdc",
                         "Bbp",
                         "Bds",
                         "Bi", 
+                        "Bpmn",
                         "Brf",
+                        "Bte",
                         "Btp",
                         "Bwp",
                         "Cda",
@@ -59,8 +71,10 @@ class Capital:
                         "Cmod",
                         "Cpi",
                         "Cpwi",
+                        "Crud",
+                        "Csv",
+                        "Cuni",
                         "Dax",
-                        "Devops",
                         "Dra",
                         "E2e",
                         "Ec2",
@@ -78,25 +92,34 @@ class Capital:
                         "Idocs",
                         "Idoc",
                         "Is-h",
+                        "J2c",
                         "Java",
                         "Jira",
+                        "Json",
+                        "Lean",
                         "Linux",
                         "Lsmw",
+                        "Ltmom",
+                        "Mba",
                         "Mpr",
                         "Mrp",
                         "N1mepi",
                         "Note",
-                        "Odata",
+                        "O2c",
+                        "Ooalv",
                         "Oops",
                         "Pdf",
+                        "Pfcg",
                         "Pld",
                         "Pl-sql",
                         "Pmbok",
                         "Po-pi",
                         "Ptp",
-                        "Python",
                         "Rad",
+                        "Rap",
                         "Rfc",
+                        "Rise",
+                        "Ricefw",
                         "Sap",
                         "Scrum",
                         "Se11",
@@ -105,20 +128,28 @@ class Capital:
                         "Sql",
                         "Sqvi",
                         "Ssff",
+                        "Su01",
+                        "Sq01",
+                        "Sq02",
+                        "Tvarvc",
                         "Ui5",
                         "Uml",
                         "Vpc",
                         "Windows",
+                        "Wms",
                         "X-road",
                         "Aa", "aa",
                         "Ai", "ai",
                         "Bi", "bi",
                         "Bp", "bp",
+                        "Cd", "cd",
+                        "Ci", "ci",
                         "Co", "co",
                         "Fi", "fi",
                         "Hp", "hp",
                         "Hr", "hr",
                         "Ia", "ia",
+                        "It", "it",
                         "Mm", "mm",
                         "Nw", "nw",
                         "Oo", "oo",
@@ -139,20 +170,32 @@ class Capital:
                      ]
       #Excepciones x Palabra Clave
       self.Excep_03 = [
-                        ["T-code", "T-Code"],
+                        ["Adobeforms","AdobeForms"],
                         ["APIS", "APIs"],
                         ["BADIS", "BADIs"],
+                        ["Chatgpt","ChatGPT"],
+                        ["Devops","DevOps"],
                         ["Gaps", "GAPs"],
-                        ["Wifi","WiFi"],
-                        ["Chatgpt","ChatGPT"]
+                        ["Github","GitHub"],
+                        ["Jbpm","jBPM"],
+                        ["Keepassxc","KeePassXC"],
+                        ["Kpis","KPIs"],
+                        ["Odata","OData"],
+                        ["Sapscript","SapScript"],
+                        ["Smartforms","SmartForms"],
+                        ["Successfactors", "SuccessFactors"],
+                        ["T-code", "T-Code"],
+                        ["Wifi","WiFi"]
                      ]
       #Excepciones x Gramática
       self.Excep_04 = [
                         ["Del", "del"],
-                        ["Los", "los"],
-                        ["Las", "las"],
-                        ["Una", "una"],
-                        ["For", "for"]
+                        #["Los", "los"],
+                        #["Las", "las"],
+                        #["Una", "una"],
+                        ["For", "for"],
+                        ["no", "No"],
+                        ["up","Up"]
                      ]
 
 
@@ -195,7 +238,8 @@ class Capital:
          if text[i].find("-") >= 0:
             otro = text[i].split("-")
             otro[1] = otro[1].capitalize()
-            text[i] = otro[0] + "-" + otro[1]
+            delimiter = "-"
+            text[i] = delimiter.join(otro)
 
          #Excepciones x Guión Bajo
          if text[i].find("_") >= 0:

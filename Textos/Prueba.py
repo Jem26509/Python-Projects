@@ -2,7 +2,7 @@
 import os
 import Capital
 import sys
- 
+
 if len(sys.argv) > 1:
     Directory = sys.argv[1]
     if len(sys.argv) > 2:
@@ -21,11 +21,13 @@ for Nombre in os.listdir():
     Archivo, Extension = os.path.splitext(Nombre)
     Archivo = Archivo.replace('  ',' ')
     Archivo = Archivo.replace('+',' ')
+    #Archivo = Archivo.replace('-',' ')
+    Archivo = Archivo.replace('!','')
     if Archivo[0] != "_":
         Archivo = Archivo.replace('_',' ')
 
     if Extension != '':
-        Texto = Archivo.split(" 174")
+        Texto = Archivo.split(" 201")
         Archivo = Texto[0]
 
         Archivo = Capital.Capital(Archivo).capital() + Extension.lower()
