@@ -69,6 +69,7 @@ class Capital:
                         "Cds",
                         "Ci-cd",
                         "Cmod",
+                        "Copa",
                         "Cpi",
                         "Cpwi",
                         "Crud",
@@ -114,6 +115,7 @@ class Capital:
                         "Pl-sql",
                         "Pmbok",
                         "Po-pi",
+                        "Pqr",
                         "Ptp",
                         "Rad",
                         "Rap",
@@ -168,8 +170,14 @@ class Capital:
                         "Vb", "vb",
                         "Wf", "wf"
                      ]
-      #Excepciones x Palabra Clave
+      #Excepciones x Símbolos
       self.Excep_03 = [
+                        "(",
+                        "-",
+                        "_"
+                     ]
+      #Excepciones x Palabra Clave
+      self.Excep_04 = [
                         ["Adobeforms","AdobeForms"],
                         ["APIS", "APIs"],
                         ["BADIS", "BADIs"],
@@ -188,7 +196,7 @@ class Capital:
                         ["Wifi","WiFi"]
                      ]
       #Excepciones x Gramática
-      self.Excep_04 = [
+      self.Excep_05 = [
                         ["Del", "del"],
                         #["Los", "los"],
                         #["Las", "las"],
@@ -228,33 +236,22 @@ class Capital:
          if text[i] in self.Excep_02:
             text[i] = text[i].upper()
 
-         #Excepciones x Paréntesis
-         if text[i].find("(") >= 0:
-            otro = text[i].split("(")
-            otro[1] = otro[1].capitalize()
-            text[i] = "(" + otro[1]
-
-         #Excepciones x Guión
-         if text[i].find("-") >= 0:
-            otro = text[i].split("-")
-            otro[1] = otro[1].capitalize()
-            delimiter = "-"
-            text[i] = delimiter.join(otro)
-
-         #Excepciones x Guión Bajo
-         if text[i].find("_") >= 0:
-            otro = text[i].split("_")
-            otro[1] = otro[1].capitalize()
-            text[i] = "_" + otro[1]
+         #Excepciones x Símbolo
+         for j in self.Excep_03:
+            if text[i].find(j) >= 0:
+               otro = text[i].split(j)
+               otro[1] = otro[1].capitalize()
+               delimiter = j
+               text[i] = delimiter.join(otro)
 
          #Excepciones x Palabra Clave
-         for j in self.Excep_03:
+         for j in self.Excep_04:
             if j[0] in text[i]:
                text[i] = text[i].replace(j[0], j[1])
 
          #Excepciones x Gramática
          if i != 0:
-            for j in self.Excep_04:
+            for j in self.Excep_05:
                if j[0] == text[i]:
                   text[i] = text[i].replace(j[0], j[1])
 

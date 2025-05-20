@@ -27,7 +27,7 @@ for Nombre in os.listdir():
         Archivo = Archivo.replace('_',' ')
 
     if Extension != '':
-        Texto = Archivo.split(" 201")
+        Texto = Archivo.split(" 174")
         Archivo = Texto[0]
 
         Archivo = Capital.Capital(Archivo).capital() + Extension.lower()
