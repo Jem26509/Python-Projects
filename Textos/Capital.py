@@ -37,6 +37,11 @@ class Capital:
                         ["smart forms","smartforms"],
                         ["adobe forms","adobeforms"],
                         ["ooabap","oo abap"],
+                        ["cr tico","crítico"],
+                        ["kpi ","kpis "],
+                        ["okr ","okrs "],
+                        ["okr","okrs"],
+                        ["okrss","okrs"],
                         [" docx",""]
                      ]
       #Excepciones x Palabra Reservada
@@ -44,6 +49,7 @@ class Capital:
                         "Abap",
                         "Adt", 
                         "Agile",
+                        "Ágile",
                         "Alv",
                         "Amdp",
                         "Apis",
@@ -86,10 +92,12 @@ class Capital:
                         "Fico",
                         "Fiori",
                         "Git",
+                        "Gts",
                         "Hana",
                         "Hcm",
                         "Hl7",
                         "Html",
+                        "Ibp",
                         "Idocs",
                         "Idoc",
                         "Is-h",
@@ -109,19 +117,24 @@ class Capital:
                         "O2c",
                         "Ooalv",
                         "Oops",
+                        "P2p",
                         "Pdf",
                         "Pfcg",
                         "Pld",
                         "Pl-sql",
+                        "Pm2",
                         "Pmbok",
+                        "Pmi",
                         "Po-pi",
                         "Pqr",
                         "Ptp",
+                        "R2r",
                         "Rad",
                         "Rap",
                         "Rfc",
                         "Rise",
                         "Ricefw",
+                        "Rrhh",
                         "Sap",
                         "Scrum",
                         "Se11",
@@ -130,12 +143,14 @@ class Capital:
                         "Sql",
                         "Sqvi",
                         "Ssff",
+                        "Sst",
                         "Su01",
                         "Sq01",
                         "Sq02",
                         "Tvarvc",
                         "Ui5",
                         "Uml",
+                        "Vba",
                         "Vpc",
                         "Windows",
                         "Wms",
@@ -147,6 +162,7 @@ class Capital:
                         "Cd", "cd",
                         "Ci", "ci",
                         "Co", "co",
+                        "Db", "DB",
                         "Fi", "fi",
                         "Hp", "hp",
                         "Hr", "hr",
@@ -162,11 +178,15 @@ class Capital:
                         "Pr", "pr",
                         "Ps", "ps",
                         "Qa", "qa",
+                        "Qm", "qm",
                         "R3", "r3",
                         "Rn", "rn",
                         "S4", "s4",
                         "Sd", "sd",
+                        "Ti", "ti",
+                        "Tm", "tm",
                         "Ui", "ui",
+                        "Ux", "ux",
                         "Vb", "vb",
                         "Wf", "wf"
                      ]
@@ -188,12 +208,15 @@ class Capital:
                         ["Jbpm","jBPM"],
                         ["Keepassxc","KeePassXC"],
                         ["Kpis","KPIs"],
+                        ["Okrs","OKRs"],
                         ["Odata","OData"],
                         ["Sapscript","SapScript"],
                         ["Smartforms","SmartForms"],
                         ["Successfactors", "SuccessFactors"],
                         ["T-code", "T-Code"],
-                        ["Wifi","WiFi"]
+                        ["Wifi","WiFi"],
+                        ["Mbas","MBAs"],
+                        ["Brds","BRDs"]
                      ]
       #Excepciones x Gramática
       self.Excep_05 = [
@@ -203,7 +226,8 @@ class Capital:
                         #["Una", "una"],
                         ["For", "for"],
                         ["no", "No"],
-                        ["up","Up"]
+                        ["up","Up"],
+                        ["sé","Sé"]
                      ]
 
 
