@@ -86,6 +86,7 @@ class Capital:
                         "E2e",
                         "Ec2",
                         "Ecc",
+                        "Eda",
                         "Erp",
                         "Ewm",
                         "Fhir",
