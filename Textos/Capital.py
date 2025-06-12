@@ -26,10 +26,10 @@ class Capital:
                         ["wi fi","wifi"],
                         ["almac n","almacén"],
                         ["p gina","página"],
-                        ["f sica","física"],
-                        ["at mico","atómico"],
+                        ["f sic","físic"],
+                        ["at mic","atómic"],
                         ["categor a","categoría"],
-                        ["t pico","típico"],
+                        ["t pic","típic"],
                         ["est s","estás"],
                         ["dec logo", "decálogo"],
                         ["success factors", "successfactors"],
@@ -37,11 +37,15 @@ class Capital:
                         ["smart forms","smartforms"],
                         ["adobe forms","adobeforms"],
                         ["ooabap","oo abap"],
-                        ["cr tico","crítico"],
+                        ["cr tic","crític"],
                         ["kpi ","kpis "],
                         ["okr ","okrs "],
                         ["okr","okrs"],
                         ["okrss","okrs"],
+                        ["i.s.h","is-h"],
+                        ["b sic","básic"],
+                        ["din mic","dinámic"],
+                        ["auditor a","auditoría"],
                         [" docx",""]
                      ]
       #Excepciones x Palabra Reservada
@@ -86,6 +90,7 @@ class Capital:
                         "E2e",
                         "Ec2",
                         "Ecc",
+                        "Ech",
                         "Eda",
                         "Erp",
                         "Ewm",
@@ -105,10 +110,12 @@ class Capital:
                         "J2c",
                         "Java",
                         "Jira",
+                        "Job",
                         "Json",
                         "Lean",
                         "Linux",
                         "Lsmw",
+                        "Ltmc",
                         "Ltmom",
                         "Mba",
                         "Mpr",
@@ -139,8 +146,10 @@ class Capital:
                         "Sap",
                         "Scrum",
                         "Se11",
+                        "Sm36",
                         "Snote",
                         "Spau",
+                        "Spro",
                         "Sql",
                         "Sqvi",
                         "Ssff",
@@ -217,7 +226,9 @@ class Capital:
                         ["T-code", "T-Code"],
                         ["Wifi","WiFi"],
                         ["Mbas","MBAs"],
-                        ["Brds","BRDs"]
+                        ["Brds","BRDs"],
+                        ["Jobs","JOBs"],
+                        ["Gxp","GxP"]
                      ]
       #Excepciones x Gramática
       self.Excep_05 = [

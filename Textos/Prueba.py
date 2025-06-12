@@ -43,4 +43,6 @@ for Nombre in os.listdir():
 
         print('9', Archivo)
         os.rename(Nombre,Archivo)
+
+print('')
 print("FIN")
