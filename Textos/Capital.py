@@ -46,6 +46,7 @@ class Capital:
                         ["b sic","básic"],
                         ["din mic","dinámic"],
                         ["auditor a","auditoría"],
+                        ["pr ctic", "práctic"],
                         [" docx",""]
                      ]
       #Excepciones x Palabra Reservada
@@ -79,6 +80,7 @@ class Capital:
                         "Cds",
                         "Ci-cd",
                         "Cmod",
+                        "Cobol",
                         "Copa",
                         "Cpi",
                         "Cpwi",
@@ -103,6 +105,7 @@ class Capital:
                         "Hcm",
                         "Hl7",
                         "Html",
+                        "Http",
                         "Ibp",
                         "Idocs",
                         "Idoc",
